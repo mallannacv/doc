@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: Outfit;
+}
+
+.active hr{
+    @apply block
+}
+
+::-webkit-scrollbar{
+    @apply hidden
+}
+
+@media (max-width:740px) {
+    .active p{
+        @apply text-white bg-primary
+    }
+}
+
+/* Put this in index.css or Navbar.css */
+@media (max-width: 1000px) {
+  /* Hide desktop elements */
+  .custom-hide-desktop {
+    display: none !important;
+  }
+
+  /* Show mobile elements */
+  .custom-show-mobile {
+    display: flex !important;
+  }
+}
+
+@media (min-width: 1001px) {
+  .custom-hide-desktop {
+    display: flex !important;
+  }
+
+  .custom-show-mobile {
+    display: none !important;
+  }
+}
+.top-doctors-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+@media (min-width: 900px) {
+  .top-doctors-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1200px) {
+  .top-doctors-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1500px) {
+  .top-doctors-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
